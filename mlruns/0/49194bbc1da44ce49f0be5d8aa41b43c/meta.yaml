@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/unknowntpo/repo/unknowntpo/threads-nextjs/ml-service/mlruns/0/49194bbc1da44ce49f0be5d8aa41b43c/artifacts
+end_time: 1760579033529
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 49194bbc1da44ce49f0be5d8aa41b43c
+run_name: efficient-gull-266
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1760579028491
+status: 3
+tags: []
+user_id: unknowntpo

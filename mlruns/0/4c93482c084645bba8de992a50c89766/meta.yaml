@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/unknowntpo/repo/unknowntpo/threads-nextjs/ml-service/mlruns/0/4c93482c084645bba8de992a50c89766/artifacts
+end_time: 1760579039680
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 4c93482c084645bba8de992a50c89766
+run_name: resilient-koi-963
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1760579037204
+status: 3
+tags: []
+user_id: unknowntpo

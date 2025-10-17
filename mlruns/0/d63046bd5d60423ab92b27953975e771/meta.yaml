@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/unknowntpo/repo/unknowntpo/threads-nextjs/ml-service/mlruns/0/d63046bd5d60423ab92b27953975e771/artifacts
+end_time: 1760581104957
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: d63046bd5d60423ab92b27953975e771
+run_name: fearless-snail-675
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1760581101689
+status: 3
+tags: []
+user_id: unknowntpo

@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/unknowntpo/repo/unknowntpo/threads-nextjs/ml-service/mlruns/0/13afac21b55b417eb4f561c70ae6487d/artifacts
+end_time: 1760578942524
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 13afac21b55b417eb4f561c70ae6487d
+run_name: glamorous-stag-137
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1760578939791
+status: 3
+tags: []
+user_id: unknowntpo

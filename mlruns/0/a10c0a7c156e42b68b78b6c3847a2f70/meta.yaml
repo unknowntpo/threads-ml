@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/unknowntpo/repo/unknowntpo/threads-nextjs/ml-service/mlruns/0/a10c0a7c156e42b68b78b6c3847a2f70/artifacts
+end_time: 1760665282708
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: a10c0a7c156e42b68b78b6c3847a2f70
+run_name: silent-calf-60
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1760665280622
+status: 3
+tags: []
+user_id: unknowntpo

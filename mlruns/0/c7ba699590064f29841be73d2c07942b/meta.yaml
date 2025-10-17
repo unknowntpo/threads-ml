@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/unknowntpo/repo/unknowntpo/threads-nextjs/ml-service/mlruns/0/c7ba699590064f29841be73d2c07942b/artifacts
+end_time: 1760665284974
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c7ba699590064f29841be73d2c07942b
+run_name: orderly-moose-101
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1760665282715
+status: 3
+tags: []
+user_id: unknowntpo

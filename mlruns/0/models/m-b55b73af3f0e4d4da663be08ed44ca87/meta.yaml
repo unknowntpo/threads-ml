@@ -1,0 +1,10 @@
+artifact_location: file:///Users/unknowntpo/repo/unknowntpo/threads-nextjs/ml-service/mlruns/0/models/m-b55b73af3f0e4d4da663be08ed44ca87/artifacts
+creation_timestamp: 1760405618331
+experiment_id: '0'
+last_updated_timestamp: 1760405620378
+model_id: m-b55b73af3f0e4d4da663be08ed44ca87
+model_type: null
+name: knn_model
+source_run_id: 9d33f4c95263414ca0da4f6f70098c52
+status: 2
+status_message: null

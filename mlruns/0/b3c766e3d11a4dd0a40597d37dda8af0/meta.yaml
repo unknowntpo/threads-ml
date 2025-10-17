@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/unknowntpo/repo/unknowntpo/threads-nextjs/ml-service/mlruns/0/b3c766e3d11a4dd0a40597d37dda8af0/artifacts
+end_time: 1760578962625
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b3c766e3d11a4dd0a40597d37dda8af0
+run_name: traveling-ray-561
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1760578959529
+status: 3
+tags: []
+user_id: unknowntpo

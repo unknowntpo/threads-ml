@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/unknowntpo/repo/unknowntpo/threads-nextjs/ml-service/mlruns/0/6525c346a82f454a8e88a566bd9caace/artifacts
+end_time: 1760579288368
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 6525c346a82f454a8e88a566bd9caace
+run_name: upset-crane-180
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1760579285664
+status: 3
+tags: []
+user_id: unknowntpo

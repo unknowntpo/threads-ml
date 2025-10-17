@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/unknowntpo/repo/unknowntpo/threads-nextjs/ml-service/mlruns/0/475b01999d28440aa1dc6741ad64a173/artifacts
+end_time: 1760579757408
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 475b01999d28440aa1dc6741ad64a173
+run_name: capricious-lynx-510
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1760579755252
+status: 3
+tags: []
+user_id: unknowntpo

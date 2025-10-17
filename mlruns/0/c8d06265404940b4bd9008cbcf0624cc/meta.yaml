@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/unknowntpo/repo/unknowntpo/threads-nextjs/ml-service/mlruns/0/c8d06265404940b4bd9008cbcf0624cc/artifacts
+end_time: 1760599021457
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c8d06265404940b4bd9008cbcf0624cc
+run_name: fortunate-toad-192
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1760599018206
+status: 3
+tags: []
+user_id: unknowntpo

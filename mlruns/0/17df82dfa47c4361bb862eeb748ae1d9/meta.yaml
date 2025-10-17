@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/unknowntpo/repo/unknowntpo/threads-nextjs/ml-service/mlruns/0/17df82dfa47c4361bb862eeb748ae1d9/artifacts
+end_time: 1760598765049
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 17df82dfa47c4361bb862eeb748ae1d9
+run_name: gifted-donkey-448
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1760598761612
+status: 3
+tags: []
+user_id: unknowntpo

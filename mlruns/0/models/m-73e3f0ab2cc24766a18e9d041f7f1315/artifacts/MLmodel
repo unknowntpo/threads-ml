@@ -1,0 +1,14 @@
+artifact_path: file:///Users/unknowntpo/repo/unknowntpo/threads-nextjs/ml-service/mlruns/0/models/m-73e3f0ab2cc24766a18e9d041f7f1315/artifacts
+flavors:
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.2
+mlflow_version: 3.4.0
+model_id: m-73e3f0ab2cc24766a18e9d041f7f1315
+model_size_bytes: 514
+model_uuid: m-73e3f0ab2cc24766a18e9d041f7f1315
+prompts: null
+run_id: a10c0a7c156e42b68b78b6c3847a2f70
+utc_time_created: '2025-10-17 01:41:20.874583'

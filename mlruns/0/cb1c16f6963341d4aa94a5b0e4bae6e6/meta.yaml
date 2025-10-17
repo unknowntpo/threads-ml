@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/unknowntpo/repo/unknowntpo/threads-nextjs/ml-service/mlruns/0/cb1c16f6963341d4aa94a5b0e4bae6e6/artifacts
+end_time: 1760579274949
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: cb1c16f6963341d4aa94a5b0e4bae6e6
+run_name: stylish-pug-212
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1760579272757
+status: 3
+tags: []
+user_id: unknowntpo

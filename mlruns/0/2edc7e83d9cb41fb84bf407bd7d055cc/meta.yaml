@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/unknowntpo/repo/unknowntpo/threads-nextjs/ml-service/mlruns/0/2edc7e83d9cb41fb84bf407bd7d055cc/artifacts
+end_time: 1760579270296
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 2edc7e83d9cb41fb84bf407bd7d055cc
+run_name: smiling-hen-462
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1760579267254
+status: 3
+tags: []
+user_id: unknowntpo

@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/unknowntpo/repo/unknowntpo/threads-nextjs/ml-service/mlruns/0/0c855c6d33c64586b40dc58e3c799d80/artifacts
+end_time: 1760512639887
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 0c855c6d33c64586b40dc58e3c799d80
+run_name: omniscient-kite-888
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1760512637464
+status: 3
+tags: []
+user_id: unknowntpo

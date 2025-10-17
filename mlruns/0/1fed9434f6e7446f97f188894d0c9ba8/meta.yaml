@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/unknowntpo/repo/unknowntpo/threads-nextjs/ml-service/mlruns/0/1fed9434f6e7446f97f188894d0c9ba8/artifacts
+end_time: 1760512743310
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 1fed9434f6e7446f97f188894d0c9ba8
+run_name: secretive-shark-833
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1760512741020
+status: 3
+tags: []
+user_id: unknowntpo

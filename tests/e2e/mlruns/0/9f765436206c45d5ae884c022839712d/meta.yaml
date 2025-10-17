@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/unknowntpo/repo/unknowntpo/threads-nextjs/ml-service/tests/e2e/mlruns/0/9f765436206c45d5ae884c022839712d/artifacts
+end_time: 1760408992681
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 9f765436206c45d5ae884c022839712d
+run_name: classy-mule-153
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1760408990361
+status: 3
+tags: []
+user_id: unknowntpo

@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/unknowntpo/repo/unknowntpo/threads-nextjs/ml-service/mlruns/0/209e2007b0f84be9b87fb3f92c2e41dd/artifacts
+end_time: 1760579290484
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 209e2007b0f84be9b87fb3f92c2e41dd
+run_name: thundering-asp-619
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1760579288414
+status: 3
+tags: []
+user_id: unknowntpo

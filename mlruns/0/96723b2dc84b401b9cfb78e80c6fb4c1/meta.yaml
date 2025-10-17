@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/unknowntpo/repo/unknowntpo/threads-nextjs/ml-service/mlruns/0/96723b2dc84b401b9cfb78e80c6fb4c1/artifacts
+end_time: 1760599026049
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 96723b2dc84b401b9cfb78e80c6fb4c1
+run_name: efficient-vole-309
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1760599023858
+status: 3
+tags: []
+user_id: unknowntpo

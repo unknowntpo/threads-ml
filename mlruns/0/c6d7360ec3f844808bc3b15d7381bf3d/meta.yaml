@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/unknowntpo/repo/unknowntpo/threads-nextjs/ml-service/mlruns/0/c6d7360ec3f844808bc3b15d7381bf3d/artifacts
+end_time: 1760578570343
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c6d7360ec3f844808bc3b15d7381bf3d
+run_name: rare-ram-284
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1760578568126
+status: 3
+tags: []
+user_id: unknowntpo

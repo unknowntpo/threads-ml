@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/unknowntpo/repo/unknowntpo/threads-nextjs/ml-service/mlruns/0/fa3764afe3cb4408b27dbe9686037cfa/artifacts
+end_time: 1760665278342
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: fa3764afe3cb4408b27dbe9686037cfa
+run_name: loud-mule-166
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1760665275629
+status: 3
+tags: []
+user_id: unknowntpo

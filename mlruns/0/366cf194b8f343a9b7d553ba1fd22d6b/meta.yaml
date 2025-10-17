@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/unknowntpo/repo/unknowntpo/threads-nextjs/ml-service/mlruns/0/366cf194b8f343a9b7d553ba1fd22d6b/artifacts
+end_time: 1760598772099
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 366cf194b8f343a9b7d553ba1fd22d6b
+run_name: skittish-koi-854
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1760598769693
+status: 3
+tags: []
+user_id: unknowntpo

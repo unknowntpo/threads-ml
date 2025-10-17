@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/unknowntpo/repo/unknowntpo/threads-nextjs/ml-service/mlruns/0/8846b84034a642789f46876edaac006e/artifacts
+end_time: 1760579050149
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 8846b84034a642789f46876edaac006e
+run_name: gentle-wolf-858
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1760579046220
+status: 3
+tags: []
+user_id: unknowntpo

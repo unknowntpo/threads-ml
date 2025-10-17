@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/unknowntpo/repo/unknowntpo/threads-nextjs/ml-service/mlruns/0/9f708c4dddfe45288a7c896aee437c28/artifacts
+end_time: 1760579604405
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 9f708c4dddfe45288a7c896aee437c28
+run_name: stately-goat-6
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1760579601609
+status: 3
+tags: []
+user_id: unknowntpo

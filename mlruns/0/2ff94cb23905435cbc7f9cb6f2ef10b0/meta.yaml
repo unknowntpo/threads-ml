@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/unknowntpo/repo/unknowntpo/threads-nextjs/ml-service/mlruns/0/2ff94cb23905435cbc7f9cb6f2ef10b0/artifacts
+end_time: 1760578553431
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 2ff94cb23905435cbc7f9cb6f2ef10b0
+run_name: sedate-shrimp-263
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1760578551239
+status: 3
+tags: []
+user_id: unknowntpo

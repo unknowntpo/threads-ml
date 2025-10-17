@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/unknowntpo/repo/unknowntpo/threads-nextjs/ml-service/mlruns/0/f4393c08e6e644e282f9ec17db181d20/artifacts
+end_time: 1760579053956
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f4393c08e6e644e282f9ec17db181d20
+run_name: powerful-stag-788
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1760579050163
+status: 3
+tags: []
+user_id: unknowntpo

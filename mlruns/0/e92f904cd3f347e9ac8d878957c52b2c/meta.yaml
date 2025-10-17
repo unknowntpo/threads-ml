@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/unknowntpo/repo/unknowntpo/threads-nextjs/ml-service/mlruns/0/e92f904cd3f347e9ac8d878957c52b2c/artifacts
+end_time: 1760578572339
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e92f904cd3f347e9ac8d878957c52b2c
+run_name: marvelous-bear-45
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1760578570410
+status: 3
+tags: []
+user_id: unknowntpo

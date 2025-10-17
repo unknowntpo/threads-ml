@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/unknowntpo/repo/unknowntpo/threads-nextjs/ml-service/mlruns/0/9d33f4c95263414ca0da4f6f70098c52/artifacts
+end_time: 1760405620382
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 9d33f4c95263414ca0da4f6f70098c52
+run_name: puzzled-deer-491
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1760405618305
+status: 3
+tags: []
+user_id: unknowntpo

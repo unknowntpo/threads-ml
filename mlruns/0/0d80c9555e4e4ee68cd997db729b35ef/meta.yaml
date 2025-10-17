@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/unknowntpo/repo/unknowntpo/threads-nextjs/ml-service/mlruns/0/0d80c9555e4e4ee68cd997db729b35ef/artifacts
+end_time: 1760579752760
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 0d80c9555e4e4ee68cd997db729b35ef
+run_name: adaptable-vole-690
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1760579749911
+status: 3
+tags: []
+user_id: unknowntpo
