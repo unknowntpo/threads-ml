@@ -11,4 +11,4 @@ from threads_ml_dagster.load_generation.assets.posts import generated_posts
 def continuous_simulation():
     """Generate posts and interactions continuously."""
     posts = generated_posts()
-    simulated_interactions(posts)
+    simulated_interactions(generated_posts=posts)

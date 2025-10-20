@@ -15,5 +15,5 @@ def manual_simulation():
     Creates fake users, generates posts, and simulates interactions.
     """
     users = fake_users()
-    posts = generated_posts(users)
-    simulated_interactions(posts)
+    posts = generated_posts(fake_users=users)
+    simulated_interactions(fake_users=users, generated_posts=posts)
