@@ -3,7 +3,7 @@
 from datetime import datetime
 from typing import Any
 
-from sqlalchemy import JSON, DateTime, Float, String, Text, func
+from sqlalchemy import ARRAY, JSON, DateTime, Float, String, Text, func
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 
 
@@ -41,7 +41,7 @@ class Post(Base):
     id: Mapped[str] = mapped_column(String, primary_key=True)
     user_id: Mapped[str] = mapped_column(String, nullable=False)
     content: Mapped[str] = mapped_column(Text, nullable=False)
-    media_urls: Mapped[list[str]] = mapped_column(JSON, default=list)
+    media_urls: Mapped[list[str]] = mapped_column(ARRAY(Text), default=list)
     original_post_id: Mapped[str | None] = mapped_column(String, nullable=True)
     created_at: Mapped[datetime] = mapped_column(DateTime, server_default=func.now())
     updated_at: Mapped[datetime] = mapped_column(
