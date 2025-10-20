@@ -5,12 +5,14 @@ from app.domain.factories.fake_user_factory import FakeUserFactory
 from app.infrastructure.database.queries import count_fake_users
 
 
-@asset
-def fake_users(db, ollama):
+@asset(required_resource_keys={"db", "ollama"})
+def fake_users(context):
     """Ensure 5-10 fake users exist in database.
 
     Creates users with different interests if count is below target.
     """
+    db = context.resources.db
+    ollama = context.resources.ollama
     session = db()
 
     existing_count = count_fake_users(session)

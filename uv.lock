@@ -743,6 +743,19 @@ wheels = [
 ]
 
 [[package]]
+name = "dagster-postgres"
+version = "0.27.15"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "dagster" },
+    { name = "psycopg2-binary" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/00/1a/b574f9a2506adbf8dcd66054338ebd07891e962bbd7b3473f451b4eb8aa5/dagster_postgres-0.27.15.tar.gz", hash = "sha256:2020929badf44b0a32ce8b015b4feff6ac07f94849a99a7214d576b0f1a4e964", size = 16417, upload-time = "2025-10-16T20:37:49.714Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/2c/54/219b2ba2753fc70ad551b819f76eb49286bd49cf60319e71fd7e17322da0/dagster_postgres-0.27.15-py3-none-any.whl", hash = "sha256:d0d2e21e998f9ccb3ca04836b3c999c5c746b437971e492b1d9cb76d98d1011b", size = 22962, upload-time = "2025-10-16T20:37:48.276Z" },
+]
+
+[[package]]
 name = "dagster-shared"
 version = "1.11.15"
 source = { registry = "https://pypi.org/simple" }
@@ -4133,6 +4146,7 @@ source = { editable = "." }
 dependencies = [
     { name = "asyncpg" },
     { name = "dagster" },
+    { name = "dagster-postgres" },
     { name = "dagster-webserver" },
     { name = "fastapi" },
     { name = "greenlet" },
@@ -4167,6 +4181,7 @@ dev = [
 requires-dist = [
     { name = "asyncpg", specifier = ">=0.30.0" },
     { name = "dagster", specifier = ">=1.9.0" },
+    { name = "dagster-postgres", specifier = ">=0.25.0" },
     { name = "dagster-webserver", specifier = ">=1.9.0" },
     { name = "fastapi", specifier = ">=0.119.0" },
     { name = "greenlet", specifier = ">=3.2.4" },

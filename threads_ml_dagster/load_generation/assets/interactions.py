@@ -5,7 +5,7 @@ from datetime import datetime
 
 from dagster import asset
 
-from app.infrastructure.database.models import Like, UserInteraction
+from app.infrastructure.database.models import UserInteraction
 from app.infrastructure.database.queries import (
     extract_interest_from_bio,
     get_fake_users,
@@ -13,12 +13,14 @@ from app.infrastructure.database.queries import (
 )
 
 
-@asset(deps=["fake_users", "generated_posts"])
-def simulated_interactions(db, ollama):
+@asset(deps=["fake_users", "generated_posts"], required_resource_keys={"db", "ollama"})
+def simulated_interactions(context):
     """Simulate likes, comments, and views from fake users.
 
     Users interact with posts based on interest matching.
     """
+    db = context.resources.db
+    ollama = context.resources.ollama
     session = db()
 
     fake_user_list = get_fake_users(session)
@@ -68,23 +70,15 @@ def simulated_interactions(db, ollama):
                         interactions_created += 1
 
                     elif action == 'like':
-                        # Check if already liked
+                        # Check if already liked (check UserInteraction for existing like)
                         existing_like = (
-                            session.query(Like)
-                            .filter_by(user_id=user.id, post_id=post.id)
+                            session.query(UserInteraction)
+                            .filter_by(user_id=user.id, post_id=post.id, interaction_type='like')
                             .first()
                         )
 
                         if not existing_like:
-                            like = Like(
-                                id=str(uuid.uuid4()),
-                                user_id=user.id,
-                                post_id=post.id,
-                                created_at=datetime.utcnow(),
-                            )
-                            session.add(like)
-
-                            # Also create interaction record
+                            # Create interaction record for like
                             interaction = UserInteraction(
                                 id=str(uuid.uuid4()),
                                 user_id=user.id,

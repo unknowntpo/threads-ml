@@ -3,13 +3,13 @@ import os
 
 from dagster import Definitions, load_assets_from_package_module
 
-from threads_ml.simulation import assets, jobs, resources
+from threads_ml_dagster.load_generation import assets, jobs, resources, schedules
 
-# Load all simulation assets
-simulation_assets = load_assets_from_package_module(assets)
+# Load all load generation assets
+load_gen_assets = load_assets_from_package_module(assets)
 
-# Define simulation resources
-simulation_resources = {
+# Define load generation resources
+load_gen_resources = {
     "db": resources.DBResource(),
     "ollama": resources.OllamaResource(
         base_url=os.getenv("OLLAMA_BASE_URL", "http://ollama:11434"),
@@ -19,8 +19,8 @@ simulation_resources = {
 
 # Create combined definitions
 defs = Definitions(
-    assets=simulation_assets,
+    assets=load_gen_assets,
     jobs=[jobs.continuous_simulation, jobs.manual_simulation],
-    schedules=[jobs.continuous_schedule],
-    resources=simulation_resources,
+    schedules=[schedules.continuous_schedule],
+    resources=load_gen_resources,
 )
