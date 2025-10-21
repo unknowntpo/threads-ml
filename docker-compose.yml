@@ -1,7 +1,28 @@
-# ML Service standalone docker-compose for local development
-# Run from ml-service directory: docker-compose up -d
+# ML Service Docker Compose
+# Use with main compose: just up
+# Or standalone: cd ml-service && docker-compose up -d
 
 services:
+  # Dedicated PostgreSQL for Dagster metadata
+  dagster_postgres:
+    image: postgres:16-alpine
+    container_name: threads_dagster_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: dagster
+      POSTGRES_PASSWORD: dagster
+      POSTGRES_DB: dagster
+    ports:
+      - '5434:5432'
+    volumes:
+      - dagster_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U dagster']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Fallback postgres for standalone mode (not used when running with main compose)
   postgres:
     image: postgres:16-alpine
     container_name: ml_postgres
@@ -74,20 +95,20 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.dagster
-    container_name: ml_dagster_webserver
+    container_name: threads_dagster_webserver
     restart: unless-stopped
     ports:
-      - '3000:3000'
+      - '3001:3001'
     environment:
       DATABASE_URL: postgresql://postgres:postgres@postgres:5432/threads
+      DAGSTER_DATABASE_URL: postgresql://dagster:dagster@dagster_postgres:5432/dagster
       OLLAMA_BASE_URL: http://ollama:11434
       DAGSTER_HOME: /app/dagster_home
     depends_on:
-      postgres:
+      dagster_postgres:
         condition: service_healthy
     volumes:
-      - .:/app
-      - ml_dagster_data:/app/dagster_home
+      - dagster_data:/app/dagster_home
     entrypoint:
       - uv
       - run
@@ -95,11 +116,11 @@ services:
       - -h
       - 0.0.0.0
       - -p
-      - '3000'
+      - '3001'
       - -w
-      - /app/dagster.yaml
+      - /app/workspace.yaml
     healthcheck:
-      test: ['CMD', 'curl', '-f', 'http://localhost:3000/server_info']
+      test: ['CMD', 'curl', '-f', 'http://localhost:3001/server_info']
       interval: 30s
       timeout: 10s
       retries: 3
@@ -108,20 +129,18 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.dagster
-    container_name: ml_dagster_daemon
+    container_name: threads_dagster_daemon
     restart: unless-stopped
     environment:
       DATABASE_URL: postgresql://postgres:postgres@postgres:5432/threads
+      DAGSTER_DATABASE_URL: postgresql://dagster:dagster@dagster_postgres:5432/dagster
       OLLAMA_BASE_URL: http://ollama:11434
       DAGSTER_HOME: /app/dagster_home
     depends_on:
-      postgres:
-        condition: service_healthy
-      ollama:
+      dagster_postgres:
         condition: service_healthy
     volumes:
-      - .:/app
-      - ml_dagster_data:/app/dagster_home
+      - dagster_data:/app/dagster_home
     entrypoint:
       - uv
       - run
@@ -131,4 +150,5 @@ services:
 volumes:
   ml_postgres_data:
   ml_ollama_data:
-  ml_dagster_data:
+  dagster_postgres_data:
+  dagster_data:
