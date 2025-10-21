@@ -23,11 +23,13 @@ class OllamaService(LLMInterface):
 
     def generate_post(self, interest: str) -> str:
         """Generate post content based on interest."""
-        prompt = (
+        system_prompt = f"You are a Threads user who is passionate about {interest}."
+        user_prompt = (
             f"Create a short social media post about {interest}. "
             f"Make it casual and engaging. Maximum 280 characters. "
             f"Do not use hashtags."
         )
+        prompt = f"{system_prompt}\n\n{user_prompt}"
 
         response = self.client.generate(model=self.model, prompt=prompt)
         content = response['response'].strip()
@@ -40,27 +42,31 @@ class OllamaService(LLMInterface):
 
     def generate_comment(self, post_content: str, interest: str) -> str:
         """Generate comment for a post."""
-        prompt = (
-            f"You are a {interest} enthusiast. "
+        system_prompt = f"You are a Threads user who is interested in {interest}."
+        user_prompt = (
             f"Write a short, natural comment (1-2 sentences) on this post: \"{post_content}\". "
             f"Be friendly and relevant to the topic."
         )
+        prompt = f"{system_prompt}\n\n{user_prompt}"
 
         response = self.client.generate(model=self.model, prompt=prompt)
         return response['response'].strip()
 
     def should_interact(self, post_content: str, interest: str) -> bool:
         """Decide if user would interact with post."""
-        prompt = (
-            f"You are a {interest} enthusiast. "
-            f"Would you be interested in this post: \"{post_content}\"? "
-            f"Answer only 'yes' or 'no'."
+        system_prompt = f"You are a Threads user who is interested in {interest}."
+        user_prompt = (
+            f"Would you interact with this post: \"{post_content}\"? "
+            f"Answer ONLY 'yes' or 'no', nothing else."
         )
+        prompt = f"{system_prompt}\n\n{user_prompt}"
 
         response = self.client.generate(model=self.model, prompt=prompt)
         answer = response['response'].strip().lower()
 
-        return 'yes' in answer
+        # More lenient matching - check if yes appears anywhere in first few words
+        first_word = answer.split()[0] if answer.split() else ''
+        return 'yes' in first_word or 'yes' in answer[:10]
 
     def generate_display_name(self, interest: str) -> str:
         """Generate realistic display name."""
