@@ -25,17 +25,18 @@ def fake_users(context):
         session.close()
         return {"status": "sufficient", "count": existing_count}
 
-    # Create missing users
+    # Create missing users - cycle through interests until target reached
     factory = FakeUserFactory()
     created = 0
+    users_needed = target_count - existing_count
 
-    context.log.info(f"Creating {target_count - existing_count} new fake users")
+    context.log.info(f"Creating {users_needed} new fake users")
 
-    for interest in FakeUserFactory.INTERESTS:
-        if existing_count + created >= target_count:
-            break
+    # Use modulo to cycle through interests if needed
+    for i in range(users_needed):
+        interest = FakeUserFactory.INTERESTS[i % len(FakeUserFactory.INTERESTS)]
 
-        context.log.info(f"Creating fake user with interest: {interest}")
+        context.log.info(f"Creating fake user {i+1}/{users_needed} with interest: {interest}")
         user = factory.create_fake_user(interest, ollama, activity_level=0.7)
         context.log.info(f"Created user: {user.username} (id={user.id[:8]}...)")
         session.add(user)

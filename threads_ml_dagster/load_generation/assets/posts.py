@@ -11,7 +11,7 @@ from app.infrastructure.database.queries import extract_interest_from_bio, get_f
 
 @asset(deps=["fake_users"], required_resource_keys={"db", "ollama"})
 def generated_posts(context):
-    """Generate 1-3 posts from random fake users.
+    """Generate 3-5 posts from random fake users.
 
     Uses Ollama to create interest-based content.
     """
@@ -27,8 +27,8 @@ def generated_posts(context):
         session.close()
         return {"status": "no_fake_users", "posts_created": 0}
 
-    # Generate 1-3 posts
-    posts_to_create = random.randint(1, 3)
+    # Generate 3-5 posts (higher count for better interactions)
+    posts_to_create = random.randint(3, 5)
     context.log.info(f"Generating {posts_to_create} posts from fake users")
     posts_created = 0
 
