@@ -45,8 +45,6 @@ addopts = [
     "--strict-markers",
     "--strict-config",
 ]
-asyncio_mode = "strict"
-asyncio_default_fixture_loop_scope = "function"
 markers = [
     "e2e: End-to-end tests requiring full system",
     "integration: Integration tests requiring external services",

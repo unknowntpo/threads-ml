@@ -4,15 +4,16 @@ import pytest
 from app.infrastructure.llm.ollama_service import OllamaService
 
 
+@pytest.fixture
+def ollama_service():
+    """Create Ollama service instance 🤖"""
+    # Use localhost for integration tests
+    return OllamaService(base_url="http://localhost:11434")
+
+
 @pytest.mark.integration
 class TestOllamaService:
     """Test Ollama LLM service integration."""
-
-    @pytest.fixture
-    def ollama_service(self):
-        """Create Ollama service instance."""
-        # Use localhost for integration tests
-        return OllamaService(base_url="http://localhost:11434")
 
     def test_generate_post_returns_content(self, ollama_service):
         """Should generate post content for given interest."""

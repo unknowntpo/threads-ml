@@ -19,33 +19,31 @@ def test_trivial(trivial_fixture):
     assert trivial_fixture == "test_data"
 
 
-# @pytest.fixture
-# async def ollama_client():
-#     """Create Ollama client fixture 🤖"""
-#     print("🔧 Setting up Ollama client")
-#     client = Client(host="http://localhost:11434")
-#     yield client
-#     print("🧹 Cleaning up Ollama client")
+@pytest.fixture
+def ollama_client():
+    """Create Ollama client fixture 🤖"""
+    print("🔧 Setting up Ollama client")
+    client = Client(host="http://localhost:11434")
+    yield client
+    print("🧹 Cleaning up Ollama client")
 
 
-# @pytest.mark.integration
-# @pytest.mark.asyncio
-# async def test_ollama_connection(ollama_client):
-#     """Test basic connection to Ollama service 🔌"""
-#     # Simple list models call to verify connection
-#     response = ollama_client.list()
-#     assert response is not None
-#     print(f"✅ Connected to Ollama, models: {response}")
+@pytest.mark.integration
+def test_ollama_connection(ollama_client):
+    """Test basic connection to Ollama service 🔌"""
+    # Simple list models call to verify connection
+    response = ollama_client.list()
+    assert response is not None
+    print(f"✅ Connected to Ollama, models: {response}")
 
 
-# @pytest.mark.integration
-# @pytest.mark.asyncio
-# async def test_ollama_simple_generate(ollama_client):
-#     """Test simple text generation 💬"""
-#     response = ollama_client.generate(
-#         model="gemma3:270m", prompt="Say hello in one word"
-#     )
-#     assert response is not None
-#     assert "response" in response
-#     assert len(response["response"]) > 0
-#     print(f"✅ Generated response: {response['response'][:100]}")
+@pytest.mark.integration
+def test_ollama_simple_generate(ollama_client):
+    """Test simple text generation 💬"""
+    response = ollama_client.generate(
+        model="gemma3:270m", prompt="Say hello in one word"
+    )
+    assert response is not None
+    assert "response" in response
+    assert len(response["response"]) > 0
+    print(f"✅ Generated response: {response['response'][:100]}")

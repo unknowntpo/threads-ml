@@ -70,16 +70,25 @@ class OllamaService(LLMInterface):
 
     def generate_display_name(self, interest: str) -> str:
         """Generate realistic display name."""
-        prompt = (
+        system_prompt = f"You are helping generate usernames for a {interest} enthusiast."
+        user_prompt = (
             f"Create a short, catchy display name (1-2 words) "
             f"for a {interest} enthusiast. "
             f"Just return the name, nothing else."
         )
+        prompt = f"{system_prompt}\n\n{user_prompt}"
 
         response = self.client.generate(model=self.model, prompt=prompt)
         name = response['response'].strip()
 
         # Clean up any quotes or extra text
-        name = name.replace('"', '').replace("'", '').split()[0]
+        name = name.replace('"', '').replace("'", '')
+
+        # Handle empty response or whitespace-only response
+        if not name or not name.split():
+            return f"{interest}_fan"
+
+        # Take first word only
+        name = name.split()[0]
 
         return name[:20]  # Limit length
