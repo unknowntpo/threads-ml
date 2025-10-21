@@ -21,9 +21,23 @@ class OllamaService(LLMInterface):
         self.model = model
         self.client = Client(host=self.base_url)
 
+    def _create_system_prompt(self, interest: str, context: str = "user") -> str:
+        """Create system prompt for given interest and context.
+
+        Args:
+            interest: User's interest topic
+            context: Type of prompt - "user" (default), "passionate", or "helper"
+        """
+        if context == "passionate":
+            return f"You are a Threads user who is passionate about {interest}."
+        elif context == "helper":
+            return f"You are helping generate usernames for a {interest} enthusiast."
+        else:  # "user" or default
+            return f"You are a Threads user who is interested in {interest}."
+
     def generate_post(self, interest: str) -> str:
         """Generate post content based on interest."""
-        system_prompt = f"You are a Threads user who is passionate about {interest}."
+        system_prompt = self._create_system_prompt(interest, "passionate")
         user_prompt = (
             f"Create a short social media post about {interest}. "
             f"Make it casual and engaging. Maximum 280 characters. "
@@ -42,7 +56,7 @@ class OllamaService(LLMInterface):
 
     def generate_comment(self, post_content: str, interest: str) -> str:
         """Generate comment for a post."""
-        system_prompt = f"You are a Threads user who is interested in {interest}."
+        system_prompt = self._create_system_prompt(interest)
         user_prompt = (
             f"Write a short, natural comment (1-2 sentences) on this post: \"{post_content}\". "
             f"Be friendly and relevant to the topic."
@@ -54,7 +68,7 @@ class OllamaService(LLMInterface):
 
     def should_interact(self, post_content: str, interest: str) -> bool:
         """Decide if user would interact with post."""
-        system_prompt = f"You are a Threads user who is interested in {interest}."
+        system_prompt = self._create_system_prompt(interest)
         user_prompt = (
             f"Would you interact with this post: \"{post_content}\"? "
             f"Answer ONLY 'yes' or 'no', nothing else."
@@ -70,7 +84,7 @@ class OllamaService(LLMInterface):
 
     def generate_display_name(self, interest: str) -> str:
         """Generate realistic display name."""
-        system_prompt = f"You are helping generate usernames for a {interest} enthusiast."
+        system_prompt = self._create_system_prompt(interest, "helper")
         user_prompt = (
             f"Create a short, catchy display name (1-2 words) "
             f"for a {interest} enthusiast. "
